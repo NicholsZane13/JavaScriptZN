@@ -8,13 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <main id="timer">
-        <p>0:00</p>
-        <div class=timer-buttons>
-            <button>Start</button>
-            <button>Stop</button>
-            <button>Reset</button>
-        </div>
+            <div>Seconds: <span id="time"></span></div>
+            <input type="button" id="startTimer" value="Start Timer" onclick="start();"><br/>
+            <input type="button" id="stopTimer" value="Stop Timer"  onclick="stop();"><br/>
+            <input type="button" id="resetTimer" value="Reset Timer"  onclick="reset();"><br/>
+
     </main>
 </body>
 </html>
