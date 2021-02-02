@@ -162,14 +162,15 @@
 
         /************************************************************************************/
         //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
+        // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word 
+        //"is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
         const foodArray = [ 'potatoes', 'tamales', 'lemon','strawberries','chocolate', 'pudding', {program : 'TEKcamp'} ];
         
         let school = foodArray[foodArray.length-1]
             console.log(school.program)
 
         const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','amazing'];
-        // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word 
-        //"is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
+        
         for(let i=0; i < foodArray.length-1, i++;) {
             if (endInS(foodArray[i])){
                 const sentence = (foodArray[i] + "are" + adjectiveArray[i].value + ".");
@@ -309,12 +310,13 @@
             profession: "Soon to be TekSystems Global employee ;)",
             education: "Sterling High School, Fort Hays State University",
             fullName: function() {
-                return this.firstName + " " + this.lastName;
-            }
+                console.log(this.firstName + " " + this.lastName);
+            },
+            learn: function() {console.log(this.firstName + " is learning Javascript")}
         };
-        let learn = me.firstName + " is learning Javascript"
-        console.log(learn);
-        console.log(me.fullName)
+        me.learn()
+        me.fullName()
+        
         /************************************************************* */
 
         {
@@ -503,7 +505,7 @@
             },
         ];
     
-        let bio = devs.forEach(console.log(devs.name + " specializes in " + devs["tech_stack"]))
+        let bio = devs.forEach(console.log((a), a.name + " specializes in " + a["tech_stack"]))
         console.log(bio)
 
         
