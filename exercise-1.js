@@ -25,7 +25,7 @@
 
         //your code...
         function farenheitCelsius(f) {
-          var c = Math.round(f*5/9) - 32
+          var c = Math.round((f-32) * (5/9));
           console.log("The temperature is " + c)
         }
         farenheitCelsius(13);
@@ -35,7 +35,7 @@
 
         //your code...
         function celsiusFarenheit(c){
-            var f = Math.round(c*9/5) + 32
+            var f = Math.round((c * (9/5)) + 32); 
             console.log("The temperature is " + f)
         }
         celsiusFarenheit(16)
@@ -151,13 +151,16 @@
 
         //your code...
 
-        var i = 89;
-        var list = [0,1,2,3,4,5,6,7,8,9,10];
-        var n = list.length;
-        for (var i=0; i<n; i+=3) {
-            console.log(list[i]);
+        
+        let list = [0,1,2,3,4,5,6,7,8,9,10];
+        let newArr = [];
+        for(let i = 0; i < list.length; i++) {
+            i % 3 == 0
+            if (i % 3 == 0) {
+                newArr.push(i);
+            }
         }
-        console.log(i);
+        console.log(newArr)
 
 
         /************************************************************************************/
