@@ -434,13 +434,14 @@
 
         /************************************************************* */
         //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
-        let numbers = [1, 2, 4, 7, 3, 5, 6];
-        const oddNumbers = numbers.filter(performer);
+        function cb() {
+            console.log("This is a lot of coding.");
+        }
 
         function performer(cb) {
-            return cb % 2;
+            cb();
         }
-        console.log(oddNumbers);
+        performer(cb);
 
 
         /************************************************************* */
@@ -507,20 +508,8 @@
                 "tech_stack" : null
             },
         ];
-    
-        let bio = devs.forEach(console.log((a), a.name + " specializes in " + a["tech_stack"]))
-        console.log(bio)
-
         
-        
-
-        
-
-        
-
-        
-
-        
+  
         /************************** */  
         // Find all devs older than 24
 
@@ -608,7 +597,25 @@
         Dr. Patel is not a developer.
         */
 
-        //your code here
+       for(let i = 0; i < devs.length; i++) {
+        let noDevs = devs[i]["tech_stack"];
+
+        if (noDevs == null) {
+            console.log(`${devs[i].name}) is not a developer, but is part of the team.`)
+        } else {
+            if (noDevs.length == 1) {
+                console.log(`${devs[i].name} specializes in ${noDevs}.`);
+            } else {
+                let skilledDevs = noDevs
+                .filter(function (index) {return index != "";})
+                .slice(0, -1)
+                .join(", ");
+
+                console.log(`${devs[i].name} specializes in ${skilledDevs}, and ${noDevs[noDevs.length -1]}.`)
+            }
+        }
+    }
+
         
 
         /************************************************************* */
